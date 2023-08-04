@@ -16,3 +16,21 @@ Keyword Search Capability: Harnessing the power of Python, the CV Analysis Tool 
 CV Similarity Check: Developed using Python, the tool employs advanced algorithms to assess the content of various CVs within a designated folder. By determining potential overlaps in skills, work history, or other key attributes, it aids in recognizing patterns and identifying candidates with comparable qualifications.
 
 In summary, the Python-based CV Analysis Tool significantly streamlines the CV review and comparison process. By enabling easy CV retrieval from Google Drive through its Python script, offering comprehensive keyword search capabilities, and providing a Python-driven CV similarity assessment, it enhances your ability to efficiently evaluate and manage a collection of CVs. This tool, developed with Python's versatility, is an invaluable asset for anyone involved in talent acquisition, recruitment, or HR management.
+
+# How to you use
+
+ 1. download **cv_analysis** from github
+     `git clone https://github.com/gbasilisco/cv_analysis.git`
+ 2. open directory `cv_analysis`, or unzip zip file downloaded and install required python package with `pip3`
+ 3. create from console.cloud.google your OAuth 2.0 Client IDs you can follow this guide https://developers.google.com/drive/api/quickstart/python
+ 4. copy client_secret json file in the root of `cv_analysis`
+ 5. modify 
+ 
+    ```python
+    flow = InstalledAppFlow.from_client_secrets_file( 'SECRET_CLIENT.json', SCOPES) creds = flow.run_local_server(port=0)
+    ```
+to insert the name of your client_secret json file downloaded from Google Cloud Console
+6. create a empty file `token.json`
+7. to download use `python3 download_cv.py`
+8. to search multiple keywords use `python3 main.py key1 key2 ...`
+9. to check CV similarity `python3 similarity_CV.py`
