@@ -28,7 +28,7 @@ In summary, the Python-based CV Analysis Tool significantly streamlines the CV r
  
     ```python
     flow = InstalledAppFlow.from_client_secrets_file( 
-        'SECRET_CLIENT.json', SCOPES) 
+        '[SECRET_CLIENT.json]', SCOPES) 
     creds = flow.run_local_server(port=0)
     ```
 to insert the name of your client_secret json file downloaded from Google Cloud Console
