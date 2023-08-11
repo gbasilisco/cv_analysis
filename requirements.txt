@@ -1,0 +1,14 @@
+Flask==2.3.2
+Flask-Cors==4.0.0
+PyPDF2==3.0.1
+google-api-core==2.11.1
+google-api-python-client==2.95.0
+google-auth==2.22.0
+google-auth-httplib2==0.1.0
+google-auth-oauthlib==1.0.0
+googleapis-common-protos==1.60.0
+docx==0.2.4
+scikit-learn==1.2.0
+python-docx==0.8.11
+docx2pdf==0.1.8
+gunicorn==21.2.0

@@ -24,18 +24,18 @@ def main():
     # The file token.json stores the user's access and refresh tokens, and is
     # created automatically when the authorization flow completes for the first
     # time.
-    if os.path.exists('token.json'):
-        creds = Credentials.from_authorized_user_file('token.json', SCOPES)
+    if os.path.exists('token_.json'):
+        creds = Credentials.from_authorized_user_file('token_.json', SCOPES)
     # If there are no (valid) credentials available, let the user log in.
     if not creds or not creds.valid:
         if creds and creds.expired and creds.refresh_token:
             creds.refresh(Request())
         else:
             flow = InstalledAppFlow.from_client_secrets_file(
-                'client_secret_560342406312-8i0tv3kojidffep9sgioshchsdd7rs17.apps.googleusercontent.com.json', SCOPES)
+                'client_secret_560342406312-8i0tv3kojidffep9sgioshchsdd7rs17_.apps.googleusercontent.com.json', SCOPES)
             creds = flow.run_local_server(port=0)
         # Save the credentials for the next run
-        with open('token.json', 'w') as token:
+        with open('token_.json', 'w') as token:
             token.write(creds.to_json())
 
     try:
@@ -56,7 +56,7 @@ def main():
         #print(results)
         files = results.get('files', [])
 
-        folder_path = "Download/"
+        folder_path = "CV/"
 
         # Loop attraverso i file nella cartella e cancellali
         for filename in os.listdir(folder_path):
